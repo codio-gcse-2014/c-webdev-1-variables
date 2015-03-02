@@ -5,10 +5,12 @@ function testFunction() {
   var firstName = "Michael";
   var lastName = 'Palin';
   var fullName = firstName + " " + lastName;
-  
   display("Full Name: ", fullName);
- 
+
+  fullName += "!"
+  display("Added the !: ", fullName);
+
   var quote = "Michael\'s \"quote\" here";
-  display("Escpaed characters: ", quote);
+  display("Escaped characters: ", quote);
   
 }

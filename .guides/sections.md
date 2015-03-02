@@ -285,12 +285,15 @@ The answer is character escaping. The following table shows how to do this. The 
 | `\uXXXX`	| unicode codepoint |
 | `\xXX`	| the Latin-1 character |
 
+## Getting a specific character
+If you want to get a specific character within a string, you can actually reference it like this.
 
+```javascript
+var string = "ABCDE";
+var character = string[2];   // "C"
+```
 
-## String properties
-Because a Javascript string is in fact an object (don't worry too much about the details of this yet), we can also get properties about our string.
-
-The full list of properties can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) but here are teh most interesting ones presented in a less intimidating way.
+`string[2]` actually refers to the 3rd character, not the second, because the first character index starts at 0, not 1. We will cover this in more detail when we talk about arrays before long.
 
 
 
@@ -300,10 +303,80 @@ The full list of properties can be found [here](https://developer.mozilla.org/en
 
 
 ---
-title: String functions
+title: String properties and functions
 files: []
 
 ---
+Because a Javascript string is in fact an object (don't worry too much about the details of this yet), we can also get properties about our string.
+
+The full list of properties and functions can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) but here are the most interesting ones presented in a less intimidating way.
+
+## String operator
+This is not really a function or property but shows you how to add to an already existing string using string arithmetic.
+
+```javascript
+var string = "ABCDE";
+var string += "12345";  // "ABCDE12345"
+```
+
+## String length
+Here's an example of one of the most common properties `length` which returns the length of your string.
+
+```javascript
+var string = "12345ABCDE";
+var strLen = string.length;  // Returns 10
+```
+
+## Slicing up a string - slice()
+You will often want to chop strings up. Here are 3 different ways to use slice.
+
+```javascript
+var string = "pre12345ABCDEpost";
+var subString = string.slice(3, 5);  // "12345"
+```
+
+- The first parameter inside the bracket is the start position - remember that 0 is the first position within the string, not 1. 
+- The second parameter is the emd position within the string.
+
+```javascript
+var string = "pre12345ABCDEpost";
+var subString = string.slice(3, -9);  // "12345"
+```
+
+- The first parameter inside the bracket is, again, the start position, 3 characters in from the start of the string.
+- The second parameter is **negative** which means the end position is 9 characters **back from the end** of the string..
+
+```javascript
+var string = "pre12345ABCDEpost";
+var subString = string.slice(-9, -4);  // "ABCDE"
+```
+
+- The first parameter is negative, so the start position is 9 characters **back from the end** of the string.
+- The second parameter is negative, which means the end position is 4 characters **back from the end** of the string.
+
+You can see all three scenarios in our code on the left. Feel free to hack it about.
+
+
+## substr() - another way to slice()
+This is pretty well the same as `slice()` but rather than specufying the start and end position, you specify the start position and the number of characters to count from that position. Take a quick look at the code on the left.
+
+## split()
+This may not make sense until we cover arrays in a short while. It takes a string and splits it up into an array of strings wherever it finds the character string you specify in the first parameter. See the code for a use case.
+
+## indexOf() and lastIndexOf()
+`indexOf()` helps you find the position of a string within another string. `lastIndexOf()` finds the last occurrence of a string within another string. See the code on the left for an example. 
+
+## toUpperCase(), toLowerCase()
+These useful functions let you convert all characters in a string to upper case (capital letters) or lower case. See the code.
+
+## trim(), trimLeft(), trimRight()
+These functions are useful for trimming of empty space at both left and right, left and right ends of a string. Try adding your own code to the example code to see it working.
+
+## The full range of string functions
+The [Mozilla Developer Metwork](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) (look in the left hand column under properties and methods) contains the full set of available methods and properties. 
+
+
+
 
 ---
 title: Converting numbers to strings
