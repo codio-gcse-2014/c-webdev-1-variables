@@ -113,8 +113,8 @@ Let's have a play with numbers. On the left hand side, is some new code in `main
 
 Feel free to play with the code and change numbers to see what happens. If you change anything, you will need to press the 'Reload preview' button in the preview window (the two circular arrows).
 
-## document.writeln
-You will see we use `document.writeln()` a lot in our code. This is a function (functions are explained soon) that writes text to the preview window. 
+## display()
+You will see we use `display()` in the code. This is a function (functions are explained soon) that simply writes text to the preview window. 
 
 ## Number types
 You can create numbers really easily in various ways, all of which are used in our sample code.
@@ -186,3 +186,127 @@ Study the code on the left as well as the output to understand this properly. No
 
 
 
+
+---
+title: Math functions
+files: []
+
+---
+Javascript also provides a standard library of functions to help you out. Take a look at the code example on the left hand side. Feel free to modify or add to.
+
+## Constants
+Codio provides you with a set of Constants. See the code on the left for a usage example.
+
+| Constant |	Meaning |
+|-|-|
+| `Math.PI` |	3.14159.... | 
+| `Math.E`	| Euler's constant |
+| `Math.LN2`	| Natural logarithm of 2 |
+| `Math.LN10` |	Natural logarithm of 10 |
+| `Math.LOG2E` |	Base 2 logarithm of E |
+| `Math.LOG10E`	| Base 10 logarithm of E |
+the rest!) |
+| `Math.SQRT1_2` |	Square root of 1/2 |
+| `Math.SQRT2` |	Square root of 2 |
+
+## Rounding
+The following numbers deal different ways of rounding numbers.
+
+| Function	| Description |
+|-|-|
+| `Math.round()` | Returns a number that is rounded to the nearest integer. Rounds up if your argument is greater than or equal to .5. Rounds down if your argument is less than .5. |
+| `Math.ceil()` |	Rounds up to the next highest integer regardless of what comes after the decimal point. |
+| `Math.floor()` |	Rounds down to the next lowest integer regardless of what comes after the decimal point. |
+
+## Useful functions
+More useful functions. Note that these functions expect and return values in Radians, not Degrees. To convert Degrees to Radians, multiply by `(Math.pi/180)`.
+
+| Function	| Description |
+|-|-|
+| `Math.abs(x)` | Returns the absolute value of x (-20 returns 20, 20 returns 20) |
+| `Math.random()` | Returns a random number between 0 and 1 |
+| `Math.pow(x, y)` |	Raises a number (`x`) to a specified power (`y`) |
+| `Math.exp(x)`	| Raises the Euler's constant to the power of `x` |
+| `Math.sqrt(x)`	| Returns the square root of x |
+
+## Trigonometry
+Standard trigonometric functions.
+
+| Function	| Description |
+|-|-|
+| `Math.cos(x)` |	Returns the cosine of x |
+| `Math.sin(x)` |	Returns the sine of x |
+| `Math.tan(x)` |	Returns the tan of x |
+| `Math.acos(x)`	| Returns the arccosine of x |
+| `Math.asin(x)`	| Returns you the arcsine of x |
+| `Math.atan(x)`	| Returns you the arctan of x |
+
+## Complete reference
+For a complete reference on all functions in the Math library, ]click here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
+
+
+
+
+---
+title: Strings
+files: []
+
+---
+Strings are nothing more than bits of text. A string can contain any type of text.
+
+Take a look at the code and you'll see a few good examples of string. Notice that they can be enclosed in single quotes `'` or double quotes `"`.
+
+## Joining strings
+As you can see in the code on the left, we can *concatenate* (a fancy word for join) strings together using the `+` sign.
+
+```javascript
+var string = "Michael" + " " + "Palin";
+```
+
+## Character escaping
+You will often find yourself wanting to include characters in your string that cannot be represented as text or conflict with the `"` or `'`.
+
+For example, how would you create a string like this `A "quote"` or like this `"Michael's "quote"`? Both of these have contain `'` and/or `"`.
+
+The answer is character escaping. The following table shows how to do this. The list has stuff that you may well not need, but things like New Line, Backslash, and Quotes are often needed.
+
+|Code |	Output |
+|-|-|
+| `\0`	| the NUL character |
+| `\'	 | single quote |
+| `\"`	| double quote |
+| `\\`	| backslash |
+| `\n`	| new line |
+| `\r`	| carriage return |
+| `\v`	| vertical tab |
+| `\t`	| tab |
+| `\b`	| backspace |
+| `\f`	| form feed |
+| `\uXXXX`	| unicode codepoint |
+| `\xXX`	| the Latin-1 character |
+
+
+
+## String properties
+Because a Javascript string is in fact an object (don't worry too much about the details of this yet), we can also get properties about our string.
+
+The full list of properties can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) but here are teh most interesting ones presented in a less intimidating way.
+
+
+
+
+
+
+
+
+---
+title: String functions
+files: []
+
+---
+
+---
+title: Converting numbers to strings
+files: []
+
+---
